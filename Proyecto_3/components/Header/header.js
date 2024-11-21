@@ -13,7 +13,7 @@ export const header = () =>
         </ul>
         <div class="searchBar">
         <span></span>
-        <input type="text" name="Barra de búsqueda" placeholder="Buscar">
+        <input id="searchBar" type="text" name="Barra de búsqueda" placeholder="Buscar">
       </div>
       </nav>`
 ;
