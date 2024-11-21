@@ -14,3 +14,5 @@ export const header = () =>
         <input type="text" name="Barra de búsqueda" id="searchBar" placeholder="Buscar">
         <input type="submit" value="Buscar">
       </nav>`
+;
+
