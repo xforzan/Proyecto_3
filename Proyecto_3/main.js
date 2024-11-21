@@ -1,4 +1,8 @@
 import './style.css'
-import { header } from './header.js' ;
+import { header } from './components/Header/header.js';
+import { changeClass } from './utils/changeClass.js';
 
-header()
+const Header = document.querySelector("header").innerHTML = header()
+
+
+changeClass("#inicio", "selected");
