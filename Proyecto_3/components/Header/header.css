@@ -1,6 +1,8 @@
 header{
     display: flex;
-    position: fixed;
+    position:sticky;
+    top: 0;
+    z-index: 1;
     background-color: white;
     width: 100%;
     height: 80px;
@@ -20,8 +22,10 @@ ul > li{
 
 
 .navigation{
+    width:100%;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     
 }
 
@@ -40,9 +44,35 @@ ul > li{
     color: white;
 }
 
-#searchBar{
+.searchBar{
+    display: flex;
+    gap: 5px;
     width: 100%;
     border-radius: 30px;
-    background-color: #343434;
+    background-color: #f1f1f1;
     padding: 10px;
+    border: none;
+    
+    
+}
+
+.searchBar > input{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: black;
+    
   }
+
+  .searchBar > input::-webkit-input-placeholder{
+    color: #888888;
+  }
+
+
+  .searchBar > span{
+    content: url("../../public/searchIcon.svg");
+  }
+  
+  

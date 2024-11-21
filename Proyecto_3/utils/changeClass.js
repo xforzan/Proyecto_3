@@ -1,3 +1,6 @@
-export const changeClass = (id, newClass) =>{
-    document.getElementById(id).classList.toggle(newClass)
+export const changeClass = (id, oldClass, newClass) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.classList.replace(oldClass, newClass);
+    }
 }

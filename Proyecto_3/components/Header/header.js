@@ -1,16 +1,19 @@
 import './header.css'
 
 export const header = () =>
-    `<img id="logo" src="/vite.svg" alt="logo">
+    `<img id="logo" src="/logo.svg" alt="logo">
       <nav class="navigation">
         <ul>
           <li>
-            <button class="navButton id="inicio" unselected" type="button" ">Inicio</button>
+            <button class="navButton unselected"  id="inicio" type="button" ">Inicio</button>
           </li>
           <li>
-            <button class="navButton id="explorar" unselected" type="button" ">Explorar</button>
+            <button class="navButton unselected" id="explorar" type="button" ">Explorar</button>
           </li>
         </ul>
-        <input type="text" name="Barra de búsqueda" id="searchBar" placeholder="Buscar">
+        <div class="searchBar">
+        <span></span>
+        <input type="text" name="Barra de búsqueda" placeholder="Buscar">
+      </div>
       </nav>`
 ;

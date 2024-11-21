@@ -1,8 +1,13 @@
 import './style.css'
 import { header } from './components/Header/header.js';
-import { changeClass } from './utils/changeClass.js';
+import { inicio } from './pages/Inicio/inicio.js'
+import { explorar } from './pages/Explorar/explorar.js'
+import { linkPage } from './utils/linkPage.js'
 
-const Header = document.querySelector("header").innerHTML = header()
+document.querySelector("header").innerHTML = header()
 
 
-changeClass("#inicio", "selected");
+linkPage("#inicio", inicio)
+linkPage("#explorar", explorar)
+
+inicio()
