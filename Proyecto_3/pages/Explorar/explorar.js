@@ -13,21 +13,7 @@ export const explorar = () => {
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
   main.innerHTML = `
-        <section class="filters">
-        <nav>
-          <select name="color" id="color">
-          <option value="color">color</option>
-          </select>
-          
-          <select name="orientation" id="orientation">
-          <option value="orientation">orientation</option>
-          </select>
 
-          <select name="order by" id="orderBy">
-          <option value="orderBy">order by</option>
-          </select>
-        </nav>
-      </section>
 `;
 
 const color = document.querySelector("#color");

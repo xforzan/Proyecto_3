@@ -1,7 +1,8 @@
 import './header.css'
 
 export const header = () =>
-    `<img id="logo" src="/logo.svg" alt="logo">
+    `<div class="header">
+<img id="logo" src="/logo.svg" alt="logo">
       <nav class="navigation">
         <ul>
           <li>
@@ -15,5 +16,28 @@ export const header = () =>
         <span></span>
         <input id="searchBar" type="text" name="Search bar" placeholder="Search">
       </div>
-      </nav>`
+      </nav>
+
+      </div>
+      
+      
+      
+      <section class="filters">
+        <nav>
+          <select name="color" id="color">
+          <option value="color">color</option>
+          </select>
+          
+          <select name="orientation" id="orientation">
+          <option value="orientation">orientation</option>
+          </select>
+
+          <select name="order by" id="orderBy">
+          <option value="orderBy">order by</option>
+          </select>
+        </nav>
+      </section>
+      
+      
+      `
 ;
