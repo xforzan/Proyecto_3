@@ -12,6 +12,7 @@ export const explorar = () => {
   changeClass("explorar","unselected" , "selected");
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
+  changeClass("filters","filters-hidden", "filters")
   main.innerHTML = `
 
 `;

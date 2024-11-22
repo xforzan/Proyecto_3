@@ -12,6 +12,7 @@ export const inicio = () => {
   const content = document.createElement("div")
   content.classList.add("content")
   main.appendChild(content)
+  changeClass("filters","filters", "filters-hidden")
   for (const picture of pictures){
     const divisor = document.createElement("div")
     divisor.classList.add("img")

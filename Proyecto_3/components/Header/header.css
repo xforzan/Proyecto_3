@@ -105,7 +105,9 @@ ul > li{
 
 
 
-
+.filters-hidden{
+    display: none;
+}
   
 .filters {
     background-color: #ffffff;

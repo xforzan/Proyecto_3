@@ -22,7 +22,7 @@ export const header = () =>
       
       
       
-      <section class="filters">
+      <section class="filters" id="filters">
         <nav>
           <select name="color" id="color">
           <option value="color">color</option>
