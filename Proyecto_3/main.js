@@ -1,16 +1,19 @@
 import './style.css'
 import { header } from './components/Header/header.js';
-import { explorar } from './pages/Explorar/explorar.js'
+import { inicio } from './pages/Inicio/inicio.js';
 import { linkPage } from './utils/linkPage.js'
 import { data } from './data/data.js'
+import { navigation } from './components/Navigation/navigation.js';
 
 
 
 document.querySelector("header").innerHTML = header();
+navigation();
   
-linkPage("#inicio", data);
-
-linkPage("#explorar", explorar);
+linkPage("#inicio", inicio);
+linkPage("#explorar", data);
+linkPage("#homeButton", inicio);
+linkPage("#exploreButton", data);
 data()
 
 

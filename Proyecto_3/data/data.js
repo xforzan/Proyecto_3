@@ -1,6 +1,7 @@
 export const pictures = []
 import { error } from '../pages/Error/error.js'
 import { inicio } from '../pages/Inicio/inicio.js'
+import { explorar } from '../pages/Explorar/explorar.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { loadPictures } from '../utils/loadPictures.js';
 import { linkPage } from '../utils/linkPage.js';
@@ -13,7 +14,7 @@ export const data = (page = 1,perPage= 40, query = "blue") => {
     .then (content => content.json())
     .then (contentJson => pictures.push(...contentJson))
     .then(() =>{
-        inicio()
+        explorar()
     })
     .then (() =>{
         loadPictures()

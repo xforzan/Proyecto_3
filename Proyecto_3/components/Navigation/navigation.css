@@ -1,0 +1,33 @@
+.bottom-nav{
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    display:none
+}
+
+#homeIcon{
+    content: url('../../public/homeIcon.svg');
+}
+
+#exploreIcon{
+    content: url('../../public/exploreIcon.png');
+}
+
+.nav-button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+@media (max-width: 350px){
+    .bottom-nav{
+        display:flex;
+    }
+
+  }
