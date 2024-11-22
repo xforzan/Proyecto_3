@@ -76,7 +76,7 @@ ul > li{
     content: url("../../public/searchIcon.svg");
   }
   
-  @media (max-width: 350px){
+  @media (max-width: 400px){
     ul{
         display:none
     }
