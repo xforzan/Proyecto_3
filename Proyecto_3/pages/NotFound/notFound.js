@@ -9,7 +9,7 @@ export const notFound = () => {
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
   main.innerHTML = `
-    <h1>hola</h1>
+    <h1>Página no encontrada</h1>
 `;
 
 };

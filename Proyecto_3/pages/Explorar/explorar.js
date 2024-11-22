@@ -9,7 +9,7 @@ export const explorar = () => {
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
   main.innerHTML = `
-    <h1>hola</h1>
+    <h1>Aquí irían las categorias a explorar.</h1>
 `;
 
 };

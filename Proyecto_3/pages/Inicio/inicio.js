@@ -20,7 +20,6 @@ export const inicio = () => {
     img.alt = picture.alt_description
     content.appendChild(divisor)
     divisor.appendChild(img)
-    console.log("hecho")
     
 
 
