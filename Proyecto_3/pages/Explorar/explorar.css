@@ -1,0 +1,29 @@
+
+
+.filters > nav{
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding: 0px;
+}
+
+.filters > nav::-webkit-scrollbar{
+    width: 0;
+}
+
+.filters > nav > select{
+    border-radius: 30px;
+    background-color: white;
+    border: solid 1px #777777;
+    width: 150px;
+    min-width: 130px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    overflow-x: scroll;
+}
+
+.filters > nav > select:hover{
+    overflow: none;
+    overflow-y: scroll;
+}

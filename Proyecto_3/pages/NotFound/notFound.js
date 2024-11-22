@@ -9,7 +9,12 @@ export const notFound = () => {
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
   main.innerHTML = `
-    <h1>Página no encontrada</h1>
+  <div class="notFound">
+        <h1>¡Oops!</h1>
+        <h2>We couldn't find any results for your search</h2>
+        <p>Try another search or return to the home page using the button below:</p>
+        <button class="returnButton" id="return">Return to Home</button>
+      </div>
 `;
 
 };

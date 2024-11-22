@@ -3,7 +3,7 @@ import { error } from '../pages/Error/error.js'
 import { inicio } from '../pages/Inicio/inicio.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { loadPictures } from '../utils/loadPictures.js';
-
+import { linkPage } from '../utils/linkPage.js';
 const API = 'sYb0frnesYTrUsWzGWjwpxTi02ZCu_KJ16QnF10dMmo';
 const URL = 'https://api.unsplash.com/photos/?client_id='
 
@@ -21,6 +21,7 @@ export const data = (page = 1,perPage= 40, query = "blue") => {
     .then(() =>{
         if(pictures.length === 0){
             notFound()
+            linkPage("#return", data);
         }
     })
     .catch (errores => {

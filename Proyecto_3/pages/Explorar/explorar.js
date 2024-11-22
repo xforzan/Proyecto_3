@@ -9,7 +9,17 @@ export const explorar = () => {
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
   main.innerHTML = `
-    <h1>Aquí irían las categorias a explorar.</h1>
+        <section class="filters">
+        <nav>
+          <select name="color" id="color">
+          <option value="color">color</option>
+          </select>
+          
+          <select name="orientation" id="orientation">
+          <option value="orientation">orientation</option>
+          </select>
+        </nav>
+      </section>
 `;
 
 };

@@ -9,6 +9,7 @@ import { data } from './data/data.js'
 document.querySelector("header").innerHTML = header();
   
 linkPage("#inicio", data);
+
 linkPage("#explorar", explorar);
 data()
 
