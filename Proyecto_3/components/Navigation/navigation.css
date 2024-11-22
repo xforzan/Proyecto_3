@@ -25,6 +25,10 @@
     gap: 8px;
 }
 
+.nav-button span{
+    font-size: 17px;
+}
+
 @media (max-width: 400px){
     .bottom-nav{
         display:flex;
