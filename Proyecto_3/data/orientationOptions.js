@@ -1,0 +1,1 @@
+export const orientationOptions = ["landscape", "portrait", "squarish"];
