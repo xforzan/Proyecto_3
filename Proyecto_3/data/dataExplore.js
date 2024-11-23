@@ -18,6 +18,7 @@ export const dataExplore = (query) => {
     })
     .then (() =>{
         loadPictures()
+        
     })
     .then(() =>{
         if(picturesExplore.length === 0){

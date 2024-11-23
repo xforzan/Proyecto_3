@@ -4,9 +4,9 @@ import { inicio } from './pages/Inicio/inicio.js';
 import { linkPage } from './utils/linkPage.js'
 import { dataHome } from './data/dataHome.js'
 import { navigation } from './components/Navigation/navigation.js';
-import { dataExplore } from './data/dataExplore.js';
 import { explorar } from './pages/Explorar/explorar.js';
 import { chargeFilters } from './utils/chargeFilters.js';
+import { dataExplore } from './data/dataExplore.js';
 
 
 
@@ -31,5 +31,7 @@ searchBar.addEventListener("keydown",(event) =>{
     dataExplore(query)
     }
 })
+
+
 
 
