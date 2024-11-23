@@ -21,16 +21,58 @@ dataHome()
 chargeFilters()
 
 
+
+
+
+let colorValue = "";
+let orientationValue = "";
+let orderByValue = "";
+let query = "";
+
 const searchBar = document.querySelector("#searchBar")
 if (searchBar.value === ""){
     console.log("hola")
 }
 searchBar.addEventListener("keydown",(event) =>{
     if (event.key === "Enter" && searchBar.value !== ""){
-        let query = searchBar.value
-    dataExplore(query)
+        query = searchBar.value
+        dataExplore(query, colorValue, orientationValue, orderByValue)
     }
 })
+
+
+
+
+
+
+    const color = document.querySelector("#color")
+    color.addEventListener("change", () =>{
+        console.log("se cambio")
+        if (color.value !== "color"){
+            let colorValue = color.value
+            dataExplore(query, colorValue, orientationValue, orderByValue)
+        }
+    })
+    
+    
+    const orientation = document.querySelector("#orientation")
+    orientation.addEventListener("change", () =>{
+        if (orientation.value !== "orientation"){
+            let orientationValue = orientation.value
+            dataExplore(query, colorValue, orientationValue, orderByValue)
+        }
+    })
+    
+    const orderBy = document.querySelector("#orderBy")
+    orderBy.addEventListener("change", () =>{
+        if (orderBy.value !== "order by"){
+            let orderByValue = orderBy.value
+            dataExplore(query, colorValue, orientationValue, orderByValue)
+        }
+        
+    })
+
+
 
 
 

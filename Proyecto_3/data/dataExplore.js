@@ -5,16 +5,31 @@ import { explorar } from '../pages/Explorar/explorar.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { loadPictures } from '../utils/loadPictures.js';
 import { linkPage } from '../utils/linkPage.js';
-const API = 'sYb0frnesYTrUsWzGWjwpxTi02ZCu_KJ16QnF10dMmo';
-const URL = 'https://api.unsplash.com/search/photos/?client_id='
 
-export const dataExplore = (query) => {
+
+export const dataExplore = (query, colorValue, orientationValue, orderByValue) => {
+    const API = 'sYb0frnesYTrUsWzGWjwpxTi02ZCu_KJ16QnF10dMmo';
+    let URL = 'https://api.unsplash.com/search/photos/?client_id='
+    URL += API + '&per_page=30'
+    if (query !== ""){
+        URL += `&query=${query}`
+    }
+    if (colorValue !== ""){
+        URL += `&color=${colorValue}`
+    }
+    if (orientationValue !== ""){
+        URL += `&orientation=${orientationValue}`
+    }
+    if (orderByValue !== ""){
+        URL += `&order_by=${orderByValue}`
+    }
     picturesExplore.length = 0
-    fetch(`${URL}${API}&query=${query}&per_page=30`)
+    fetch(`${URL}`)
     .then (content => content.json())
     .then (contentJson => picturesExplore.push(...contentJson.results))
     .then(() =>{
         explorar()
+        
     })
     .then (() =>{
         loadPictures()
