@@ -5,7 +5,7 @@ import { changeClass } from '../../utils/changeClass.js';
 import { colorsOptions } from '../../data/colorsOptions.js';
 import { orientationOptions } from '../../data/orientationOptions.js';
 import { orderByOptions } from '../../data/OrderByOptions.js';
-import { pictures } from '../../data/data.js'
+import { picturesExplore } from '../../data/dataExplore.js'
 
 export const explorar = () => {
   const main = document.querySelector("main");
@@ -48,7 +48,7 @@ for (const orderByOption of orderByOptions){
 const content = document.createElement("div")
 content.classList.add("content")
 main.appendChild(content)
-for (const picture of pictures){
+for (const picture of picturesExplore){
   const divisor = document.createElement("div")
   divisor.classList.add("img")
   const img = document.createElement("img")
