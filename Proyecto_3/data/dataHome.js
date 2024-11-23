@@ -13,9 +13,6 @@ export const dataHome = (page = 1,perPage= 40) => {
     .then(() =>{
         inicio()
     })
-    .then (() =>{
-        loadPictures()
-    })
     .catch (errores => {
         error(errores)
     })

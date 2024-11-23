@@ -6,13 +6,14 @@ import { dataHome } from './data/dataHome.js'
 import { navigation } from './components/Navigation/navigation.js';
 import { explorar } from './pages/Explorar/explorar.js';
 import { chargeFilters } from './utils/chargeFilters.js';
-import { dataExplore } from './data/dataExplore.js';
+import { dataExplore} from './data/dataExplore.js';
 
 
 let colorValue = "color";
 let orientationValue = "orientation";
 let orderByValue = "order by";
 let query = "audi";
+
 
 
 
@@ -26,8 +27,6 @@ linkPage("#exploreButton", explorar);
 dataExplore(query, colorValue, orientationValue, orderByValue)
 dataHome()
 chargeFilters()
-
-
 
 const searchBar = document.querySelector("#searchBar")
 

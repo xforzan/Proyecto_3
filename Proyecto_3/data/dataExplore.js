@@ -5,12 +5,15 @@ import { explorar } from '../pages/Explorar/explorar.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { loadPictures } from '../utils/loadPictures.js';
 import { linkPage } from '../utils/linkPage.js';
+import { getPageNum} from '../utils/loadPictures.js';
+
+
 
 
 export const dataExplore = (query = "audi", colorValue = "black", orientationValue, orderByValue) => {
-    const API = 'sYb0frnesYTrUsWzGWjwpxTi02ZCu_KJ16QnF10dMmo';
+    const API = 'F0F459-Fd5TDRyd7Nn3JgdWaZj8BM8g1eH4e8LE8Mvc';
     let URL = 'https://api.unsplash.com/search/photos/?client_id='
-    URL += API + '&per_page=30'
+    URL += API + `&page=${getPageNum()}` +'&per_page=30'
     if (query !== ""){
         URL += `&query=${query}`
     }
@@ -24,6 +27,7 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
         URL += `&order_by=${orderByValue}`
     }
     picturesExplore.length = 0
+
     fetch(`${URL}`)
     .then (content => content.json())
     .then (contentJson => picturesExplore.push(...contentJson.results))
