@@ -24,9 +24,9 @@ chargeFilters()
 
 
 
-let colorValue = "";
-let orientationValue = "";
-let orderByValue = "";
+let colorValue = "color";
+let orientationValue = "orientation";
+let orderByValue = "order by";
 let query = "";
 
 const searchBar = document.querySelector("#searchBar")
@@ -48,29 +48,26 @@ searchBar.addEventListener("keydown",(event) =>{
     const color = document.querySelector("#color")
     color.addEventListener("change", () =>{
         console.log("se cambio")
-        if (color.value !== "color"){
             let colorValue = color.value
             dataExplore(query, colorValue, orientationValue, orderByValue)
         }
-    })
+    )
     
     
     const orientation = document.querySelector("#orientation")
     orientation.addEventListener("change", () =>{
-        if (orientation.value !== "orientation"){
             let orientationValue = orientation.value
             dataExplore(query, colorValue, orientationValue, orderByValue)
         }
-    })
+    )
     
     const orderBy = document.querySelector("#orderBy")
     orderBy.addEventListener("change", () =>{
-        if (orderBy.value !== "order by"){
             let orderByValue = orderBy.value
             dataExplore(query, colorValue, orientationValue, orderByValue)
         }
         
-    })
+    )
 
 
 

@@ -14,13 +14,13 @@ export const dataExplore = (query, colorValue, orientationValue, orderByValue) =
     if (query !== ""){
         URL += `&query=${query}`
     }
-    if (colorValue !== ""){
+    if (colorValue !== "color"){
         URL += `&color=${colorValue}`
     }
-    if (orientationValue !== ""){
+    if (orientationValue !== "orientation"){
         URL += `&orientation=${orientationValue}`
     }
-    if (orderByValue !== ""){
+    if (orderByValue !== "order by"){
         URL += `&order_by=${orderByValue}`
     }
     picturesExplore.length = 0
