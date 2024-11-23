@@ -6,6 +6,7 @@ import { dataHome } from './data/dataHome.js'
 import { navigation } from './components/Navigation/navigation.js';
 import { dataExplore } from './data/dataExplore.js';
 import { explorar } from './pages/Explorar/explorar.js';
+import { chargeFilters } from './utils/chargeFilters.js';
 
 
 
@@ -17,6 +18,7 @@ linkPage("#explorar", explorar);
 linkPage("#homeButton", inicio);
 linkPage("#exploreButton", explorar);
 dataHome()
+chargeFilters()
 
 
 const searchBar = document.querySelector("#searchBar")

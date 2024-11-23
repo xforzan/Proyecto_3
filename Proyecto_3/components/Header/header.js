@@ -1,5 +1,6 @@
 import './header.css'
 
+
 export const header = () =>
     `<div class="header">
 <img id="logo" src="/logo.svg" alt="logo">
@@ -38,6 +39,6 @@ export const header = () =>
         </nav>
       </section>
       
-      
       `
 ;
+
