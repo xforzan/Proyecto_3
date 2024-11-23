@@ -1,7 +1,6 @@
 export const picturesHome = []
 import { error } from '../pages/Error/error.js'
 import { inicio } from '../pages/Inicio/inicio.js'
-import { loadPictures } from '../utils/loadPictures.js';
 const API = 'sYb0frnesYTrUsWzGWjwpxTi02ZCu_KJ16QnF10dMmo';
 const URL = 'https://api.unsplash.com/photos/?client_id='
 

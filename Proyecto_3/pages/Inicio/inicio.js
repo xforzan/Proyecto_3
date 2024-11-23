@@ -3,6 +3,25 @@ import './inicio.css'
 import { cleanPage } from "../../utils/cleanPage.js";
 import { changeClass } from '../../utils/changeClass.js';
 import { picturesHome } from '../../data/dataHome.js'
+import { eventListenerExplore } from '../Explorar/explorar.js';
+
+let pageNumHome = 1; 
+let eventAdded = false;
+
+export const eventListenerHome = () => {
+  if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
+    pageNumHome=pageNumHome+1;
+    console.log("Home:",pageNumHome);
+  }
+}
+
+export const activateEventListenerHome = () =>{
+  if (eventAdded === false){
+  window.addEventListener('scroll', eventListenerHome);
+  window.removeEventListener('scroll', eventListenerExplore);
+  eventAdded = true
+  }
+}
 
 export const inicio = () => {
   const main = document.querySelector("main");
@@ -26,4 +45,3 @@ export const inicio = () => {
 
   }
 };
-

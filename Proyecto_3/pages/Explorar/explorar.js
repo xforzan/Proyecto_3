@@ -3,6 +3,32 @@ import './explorar.css'
 import { cleanPage } from "../../utils/cleanPage.js";
 import { changeClass } from '../../utils/changeClass.js';
 import { picturesExplore } from '../../data/dataExplore.js'
+import { eventListenerHome } from '../Inicio/inicio.js';
+
+let pageNumExplore = 1; 
+let eventAdded = false;
+
+export const resetPageNum = () => {
+  pageNumExplore = 1;
+};
+
+
+export const eventListenerExplore = () => {
+  if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
+    pageNumExplore = pageNumExplore + 1;
+    console.log("Explore:",pageNumExplore);
+  }
+}
+
+export const activateEventListenerExplore = () =>{
+  if (eventAdded === false){
+  window.addEventListener('scroll', eventListenerExplore);
+  window.removeEventListener('scroll', eventListenerHome);
+  eventAdded = true
+  }
+  
+}
+
 
 
 export const explorar = () => {
@@ -28,3 +54,10 @@ export const explorar = () => {
   }
 
 };
+
+
+
+
+
+export const getPageNum = () => pageNum;
+
