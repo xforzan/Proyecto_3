@@ -7,7 +7,7 @@ import { loadPictures } from '../utils/loadPictures.js';
 import { linkPage } from '../utils/linkPage.js';
 
 
-export const dataExplore = (query, colorValue, orientationValue, orderByValue) => {
+export const dataExplore = (query = "audi", colorValue = "black", orientationValue, orderByValue) => {
     const API = 'sYb0frnesYTrUsWzGWjwpxTi02ZCu_KJ16QnF10dMmo';
     let URL = 'https://api.unsplash.com/search/photos/?client_id='
     URL += API + '&per_page=30'

@@ -1,0 +1,21 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error img{
+    width: 12vw;
+    min-width: 100px;
+}
+
+.errorMessage{
+    background-color: black;
+    padding: 5px;
+    border-radius: 30px;
+    height: fit-content;
+    color: white;
+}

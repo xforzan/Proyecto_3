@@ -9,6 +9,12 @@ import { chargeFilters } from './utils/chargeFilters.js';
 import { dataExplore } from './data/dataExplore.js';
 
 
+let colorValue = "color";
+let orientationValue = "orientation";
+let orderByValue = "order by";
+let query = "audi";
+
+
 
 document.querySelector("header").innerHTML = header();
 navigation();
@@ -17,22 +23,14 @@ linkPage("#inicio", inicio);
 linkPage("#explorar", explorar);
 linkPage("#homeButton", inicio);
 linkPage("#exploreButton", explorar);
+dataExplore(query, colorValue, orientationValue, orderByValue)
 dataHome()
 chargeFilters()
 
 
 
-
-
-let colorValue = "color";
-let orientationValue = "orientation";
-let orderByValue = "order by";
-let query = "";
-
 const searchBar = document.querySelector("#searchBar")
-if (searchBar.value === ""){
-    console.log("hola")
-}
+
 searchBar.addEventListener("keydown",(event) =>{
     if (event.key === "Enter" && searchBar.value !== ""){
         query = searchBar.value
@@ -47,7 +45,6 @@ searchBar.addEventListener("keydown",(event) =>{
 
     const color = document.querySelector("#color")
     color.addEventListener("change", () =>{
-        console.log("se cambio")
             let colorValue = color.value
             dataExplore(query, colorValue, orientationValue, orderByValue)
         }

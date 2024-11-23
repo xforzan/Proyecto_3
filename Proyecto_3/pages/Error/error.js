@@ -10,6 +10,10 @@ export const error = (error) =>{
   changeClass("inicio","selected" , "unselected");
   cleanPage(main);
   main.innerHTML = `
-    <h1>Error de la página motivo : ${error}</h1>
+    <div class="error">
+    <img src="../../public/errorIcon.png" alt="Error Icon">
+        <h1>Error loading content</h1>
+        <p>Try reloading the page or try again later</p>
+        <p class="errorMessage">${error}</p>
 `;
 }
