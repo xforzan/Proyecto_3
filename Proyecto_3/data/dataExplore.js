@@ -1,7 +1,7 @@
 export const picturesExplore = []
 import { error } from '../pages/Error/error.js'
 import { dataHome } from '../data/dataHome.js'
-import { explorar, getPageNum } from '../pages/Explorar/explorar.js'
+import { explorar, getPageNum, activateEventListenerExplore} from '../pages/Explorar/explorar.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { linkPage } from '../utils/linkPage.js';
 
@@ -32,6 +32,7 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
     .then (contentJson => picturesExplore.push(...contentJson.results))
     .then(() =>{
         explorar()
+        activateEventListenerExplore()
         
     })
     .then(() =>{

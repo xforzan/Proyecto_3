@@ -7,7 +7,7 @@ import { eventListenerHome } from '../Inicio/inicio.js';
 // import { colorValueExport, orientationValueExport, orderByValueExport, queryExport } from '../../main.js';
 
 let pageNumExplore = 1; 
-let eventAdded = false;
+
 
 export const getPageNum = () => pageNumExplore;
 
@@ -17,22 +17,16 @@ export const resetPageNum = () => {
 
 
 export const eventListenerExplore = () => {
-  setTimeout(() => {
     if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
       pageNumExplore = pageNumExplore + 1;
       console.log("Explore:",pageNumExplore);
-      newArray()
     }
-  }, 1000);
   
 }
 
 export const activateEventListenerExplore = () =>{
-  if (eventAdded === false){
   window.addEventListener('scroll', eventListenerExplore);
   window.removeEventListener('scroll', eventListenerHome);
-  eventAdded = true
-  }
   
 }
 
@@ -63,19 +57,3 @@ export const explorar = () => {
   
 
 };
-
-const newArray = () =>{
-  const main = document.querySelector("main");
-  const content = document.createElement("div")
-  content.classList.add("content")
-  main.appendChild(content)
-  for (const picture of picturesExplore){
-    const divisor = document.createElement("div")
-    divisor.classList.add("img")
-    const img = document.createElement("img")
-    img.src = picture.urls.regular
-    img.alt = picture.alt_description
-    content.appendChild(divisor)
-    divisor.appendChild(img)
-}
-}

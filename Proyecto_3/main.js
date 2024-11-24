@@ -28,7 +28,7 @@ linkPage("#inicio", inicio);
 linkPage("#explorar", explorar);
 
 
-activateEventListenerHome()
+
 linkPage("#inicio", activateEventListenerHome);
 linkPage("#explorar", activateEventListenerExplore);
 
@@ -37,7 +37,7 @@ linkPage("#exploreButton", explorar);
 dataExplore(query, colorValue, orientationValue, orderByValue)
 dataHome()
 chargeFilters()
-
+activateEventListenerHome()
 
 const searchBar = document.querySelector("#searchBar")
 
