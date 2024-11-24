@@ -8,6 +8,7 @@ import { navigation } from './components/Navigation/navigation.js';
 import { chargeFilters } from './utils/chargeFilters.js';
 import { dataExplore} from './data/dataExplore.js';
 import { resetPageNum } from './pages/Explorar/explorar.js'
+import {setColorValue, setOrientationValue,setOrderByValue , setQueryValue} from './pages/Explorar/explorar.js'
 
 
 let colorValue = "color";
@@ -15,10 +16,10 @@ let orientationValue = "orientation";
 let orderByValue = "order by";
 let query = "audi";
 
-export const colorValueExport = () => colorValue;
-export const orientationValueExport = () => orientationValue;
-export const orderByValueExport = () => orderByValue;
-export const queryExport = () => query;
+
+
+
+
 
 
 document.querySelector("header").innerHTML = header();
@@ -44,8 +45,9 @@ const searchBar = document.querySelector("#searchBar")
 searchBar.addEventListener("keydown",(event) =>{
     if (event.key === "Enter" && searchBar.value !== ""){
         query = searchBar.value
-        dataExplore(query, colorValue, orientationValue, orderByValue)
+        dataExplore(query, colorValue, orientationValue, orderByValue, 1)
         resetPageNum()
+        setQueryValue(query)
     }
 })
 
@@ -57,8 +59,9 @@ searchBar.addEventListener("keydown",(event) =>{
     const color = document.querySelector("#color")
     color.addEventListener("change", () =>{
             let colorValue = color.value
-            dataExplore(query, colorValue, orientationValue, orderByValue)
+            dataExplore(query, colorValue, orientationValue, orderByValue, 1)
             resetPageNum()
+            setColorValue(colorValue)
         }
     )
     
@@ -66,16 +69,18 @@ searchBar.addEventListener("keydown",(event) =>{
     const orientation = document.querySelector("#orientation")
     orientation.addEventListener("change", () =>{
             let orientationValue = orientation.value
-            dataExplore(query, colorValue, orientationValue, orderByValue)
+            dataExplore(query, colorValue, orientationValue, orderByValue, 1)
             resetPageNum()
+            setOrientationValue(orientationValue)
         }
     )
     
     const orderBy = document.querySelector("#orderBy")
     orderBy.addEventListener("change", () =>{
             let orderByValue = orderBy.value
-            dataExplore(query, colorValue, orientationValue, orderByValue)
+            dataExplore(query, colorValue, orientationValue, orderByValue, 1)
             resetPageNum()
+            setOrderByValue(orderByValue)
         }
         
     )

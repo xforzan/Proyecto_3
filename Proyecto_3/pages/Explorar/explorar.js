@@ -4,9 +4,37 @@ import { cleanPage } from "../../utils/cleanPage.js";
 import { changeClass } from '../../utils/changeClass.js';
 import { dataExplore, picturesExplore } from '../../data/dataExplore.js'
 import { eventListenerHome } from '../Inicio/inicio.js';
-// import { colorValueExport, orientationValueExport, orderByValueExport, queryExport } from '../../main.js';
-
 let pageNumExplore = 1; 
+
+
+let colorValue = "colorValue";
+let orientationValue = "orientation";
+let orderByValue = "order by";
+let queryValue = "audi";
+
+// Funciones para actualizar los valores globales
+export const setColorValue = (value) => {
+  colorValue = value;
+};
+
+export const setOrientationValue = (value) => {
+  orientationValue = value;
+};
+
+export const setOrderByValue = (value) => {
+  orderByValue = value;
+};
+
+export const setQueryValue = (value) => {
+  queryValue = value;
+};
+
+// Funciones para obtener los valores
+export const getColorValue = () => colorValue;
+export const getOrientationValue = () => orientationValue;
+export const getOrderByValue = () => orderByValue;
+export const getQueryValue = () => queryValue;
+
 
 
 export const getPageNum = () => pageNumExplore;
@@ -20,6 +48,7 @@ export const eventListenerExplore = () => {
     if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
       pageNumExplore = pageNumExplore + 1;
       console.log("Explore:",pageNumExplore);
+      console.log(queryValue, colorValue, orientationValue, orderByValue, pageNumExplore);
     }
   
 }

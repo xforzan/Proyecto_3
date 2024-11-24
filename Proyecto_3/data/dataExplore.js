@@ -1,16 +1,19 @@
 export const picturesExplore = []
+const morePicturesExplore = []
 import { error } from '../pages/Error/error.js'
 import { dataHome } from '../data/dataHome.js'
-import { explorar, getPageNum, activateEventListenerExplore} from '../pages/Explorar/explorar.js'
+import { explorar, activateEventListenerExplore} from '../pages/Explorar/explorar.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { linkPage } from '../utils/linkPage.js';
 
 
 
-export const dataExplore = (query = "audi", colorValue = "black", orientationValue, orderByValue) => {
+
+export const dataExplore = (query = "audi", colorValue = "black", orientationValue, orderByValue, page = 1) => {
+
     const API = 'F0F459-Fd5TDRyd7Nn3JgdWaZj8BM8g1eH4e8LE8Mvc';
     let URL = 'https://api.unsplash.com/search/photos/?client_id='
-    URL += API + `&page=${getPageNum()}`+'&per_page=30'
+    URL += API + `&page=${page}`+'&per_page=30'
     if (query !== ""){
         URL += `&query=${query}`
     }
@@ -23,17 +26,28 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
     if (orderByValue !== "order by"){
         URL += `&order_by=${orderByValue}`
     }
-    if (getPageNum() !== 1){
+    if (page === 1){
         picturesExplore.length = 0
+        console.log(`URL: ${URL}`)
+        console.log(page)
     }
 
     fetch(`${URL}`)
     .then (content => content.json())
-    .then (contentJson => picturesExplore.push(...contentJson.results))
+    .then((contentJson) => {
+        if (page === 1) {
+            picturesExplore.push(...contentJson.results);
+        }
+        else {
+            morePicturesExplore.push(...contentJson.results);
+            (picturesExplore.push(...morePicturesExplore));
+        }
+    })
     .then(() =>{
-        explorar()
+        morePicturesExplore.length = 0
         activateEventListenerExplore()
-        
+        explorar()
+
     })
     .then(() =>{
         if(picturesExplore.length === 0){
@@ -46,3 +60,15 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
     })
   };
 
+
+
+
+  export const colorValueExport = () => colorValue;
+  export const orientationValueExport = () => orientationValue;
+  export const orderByValueExport = () => orderByValue;
+  export const queryExport = () => query;
+  
+  
+  
+
+  
