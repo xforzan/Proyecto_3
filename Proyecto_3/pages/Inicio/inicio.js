@@ -9,9 +9,11 @@ let pageNumHome = 1;
 
 export const eventListenerHome = () => {
   if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
-    pageNumHome=pageNumHome+1;
+    setTimeout(() => {
+      pageNumHome=pageNumHome+1;
     console.log("Home:",pageNumHome);
     dataHome(pageNumHome, 30);
+    }, 1000);
   }
 }
 
