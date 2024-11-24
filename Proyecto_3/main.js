@@ -1,10 +1,10 @@
 import './style.css'
 import { header } from './components/Header/header.js';
 import { inicio, activateEventListenerHome } from './pages/Inicio/inicio.js';
+import { explorar, activateEventListenerExplore} from './pages/Explorar/explorar.js';
 import { linkPage } from './utils/linkPage.js'
 import { dataHome } from './data/dataHome.js'
 import { navigation } from './components/Navigation/navigation.js';
-import { explorar, activateEventListenerExplore} from './pages/Explorar/explorar.js';
 import { chargeFilters } from './utils/chargeFilters.js';
 import { dataExplore} from './data/dataExplore.js';
 import { resetPageNum } from './pages/Explorar/explorar.js'
@@ -15,7 +15,10 @@ let orientationValue = "orientation";
 let orderByValue = "order by";
 let query = "audi";
 
-
+export const colorValueExport = () => colorValue;
+export const orientationValueExport = () => orientationValue;
+export const orderByValueExport = () => orderByValue;
+export const queryExport = () => query;
 
 
 document.querySelector("header").innerHTML = header();

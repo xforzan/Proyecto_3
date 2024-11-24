@@ -1,7 +1,7 @@
 export const picturesExplore = []
 import { error } from '../pages/Error/error.js'
 import { dataHome } from '../data/dataHome.js'
-import { explorar } from '../pages/Explorar/explorar.js'
+import { explorar, getPageNum } from '../pages/Explorar/explorar.js'
 import { notFound } from '../pages/NotFound/notFound.js';
 import { linkPage } from '../utils/linkPage.js';
 
@@ -23,7 +23,9 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
     if (orderByValue !== "order by"){
         URL += `&order_by=${orderByValue}`
     }
-    picturesExplore.length = 0
+    if (getPageNum() !== 1){
+        picturesExplore.length = 0
+    }
 
     fetch(`${URL}`)
     .then (content => content.json())
