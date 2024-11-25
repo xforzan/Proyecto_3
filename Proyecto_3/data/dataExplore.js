@@ -35,7 +35,8 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
         picturesExplore.push(...contentJson.results);
     })
     .then(() =>{
-        activateEventListenerExplore()
+            activateEventListenerExplore();
+
         explorar()
 
     })

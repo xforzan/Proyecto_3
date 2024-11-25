@@ -47,7 +47,6 @@ export const resetPageNum = () => {
 export const eventListenerExplore = () => {
     if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
       pageNumExplore = pageNumExplore + 1;
-      console.log("Explore:",pageNumExplore);
       dataExplore(queryValue, colorValue, orientationValue, orderByValue, pageNumExplore);
     }
   

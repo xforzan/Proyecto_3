@@ -9,6 +9,7 @@ import { chargeFilters } from './utils/chargeFilters.js';
 import { dataExplore} from './data/dataExplore.js';
 import { resetPageNum } from './pages/Explorar/explorar.js'
 import {setColorValue, setOrientationValue,setOrderByValue , setQueryValue} from './pages/Explorar/explorar.js'
+import { scrollToTop } from './utils/scrollToTop.js';
 
 
 let colorValue = "color";
@@ -35,10 +36,10 @@ linkPage("#explorar", activateEventListenerExplore);
 
 linkPage("#homeButton", inicio);
 linkPage("#exploreButton", explorar);
-// dataExplore(query, colorValue, orientationValue, orderByValue)
+dataExplore(query, colorValue, orientationValue, orderByValue, 1)
 dataHome(1,10)
 chargeFilters()
-activateEventListenerHome()
+
 
 const searchBar = document.querySelector("#searchBar")
 
@@ -48,6 +49,8 @@ searchBar.addEventListener("keydown",(event) =>{
         dataExplore(query, colorValue, orientationValue, orderByValue, 1)
         resetPageNum()
         setQueryValue(query)
+        scrollToTop()
+        
     }
 })
 
@@ -62,6 +65,7 @@ searchBar.addEventListener("keydown",(event) =>{
             dataExplore(query, colorValue, orientationValue, orderByValue, 1)
             resetPageNum()
             setColorValue(colorValue)
+            scrollToTop()
         }
     )
     
@@ -72,6 +76,7 @@ searchBar.addEventListener("keydown",(event) =>{
             dataExplore(query, colorValue, orientationValue, orderByValue, 1)
             resetPageNum()
             setOrientationValue(orientationValue)
+            scrollToTop()
         }
     )
     
@@ -81,6 +86,7 @@ searchBar.addEventListener("keydown",(event) =>{
             dataExplore(query, colorValue, orientationValue, orderByValue, 1)
             resetPageNum()
             setOrderByValue(orderByValue)
+            scrollToTop()
         }
         
     )

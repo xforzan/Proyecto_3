@@ -1,4 +1,4 @@
-// dataHome.js
+
 export const picturesHome = [];
 import { error } from '../pages/Error/error.js';
 import { inicio, activateEventListenerHome } from '../pages/Inicio/inicio.js';
@@ -16,7 +16,7 @@ export const dataHome = (page = 1, perPage = 1) => {
     })
     .then(() => {
       inicio();
-      activateEventListenerHome();
+        activateEventListenerHome();
     })
     .catch(errores => {
       error(errores);

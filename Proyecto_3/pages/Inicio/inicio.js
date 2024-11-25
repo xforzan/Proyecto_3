@@ -11,8 +11,7 @@ export const eventListenerHome = () => {
   if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
     setTimeout(() => {
       pageNumHome = pageNumHome + 1;
-      console.log("Home:", pageNumHome);
-      dataHome(pageNumHome, 10);
+      dataHome(pageNumHome, 30);
     }, 1000);
 
   }
@@ -24,7 +23,7 @@ export const activateEventListenerHome = () => {
 };
 
 export const inicio = () => {
-  const main = document.querySelector("main");
+    const main = document.querySelector("main");
   changeClass("filters", "filters", "filters-hidden");
   changeClass("inicio", "unselected", "selected");
   changeClass("explorar", "selected", "unselected");
