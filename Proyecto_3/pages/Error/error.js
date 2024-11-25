@@ -11,7 +11,7 @@ export const error = (error) =>{
   cleanPage(main);
   main.innerHTML = `
     <div class="error">
-    <img src="../../public/errorIcon.png" alt="Error Icon">
+    <img src="/errorIcon.png" alt="Error Icon">
         <h1>Error loading content</h1>
         <p>Try reloading the page or try again later</p>
         <p class="errorMessage">${error}</p>

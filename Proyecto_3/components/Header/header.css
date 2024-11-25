@@ -80,7 +80,7 @@ ul > li{
 
 
   .searchBar > span{
-    content: url("../../public/searchIcon.svg");
+    content: url("/public/searchIcon.svg");
   }
   
   @media (max-width: 400px){
