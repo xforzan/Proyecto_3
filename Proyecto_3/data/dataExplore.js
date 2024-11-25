@@ -13,7 +13,7 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
 
     const API = 'F0F459-Fd5TDRyd7Nn3JgdWaZj8BM8g1eH4e8LE8Mvc';
     let URL = 'https://api.unsplash.com/search/photos/?client_id='
-    URL += API + `&page=${page}`+'&per_page=30'
+    URL += API + `&page=${page}`+'&per_page=10'
     if (query !== ""){
         URL += `&query=${query}`
     }
