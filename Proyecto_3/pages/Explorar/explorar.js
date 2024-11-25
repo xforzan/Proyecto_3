@@ -12,7 +12,7 @@ let orientationValue = "orientation";
 let orderByValue = "order by";
 let queryValue = "audi";
 
-// Funciones para actualizar los valores globales
+
 export const setColorValue = (value) => {
   colorValue = value;
 };
@@ -29,7 +29,7 @@ export const setQueryValue = (value) => {
   queryValue = value;
 };
 
-// Funciones para obtener los valores
+
 export const getColorValue = () => colorValue;
 export const getOrientationValue = () => orientationValue;
 export const getOrderByValue = () => orderByValue;
