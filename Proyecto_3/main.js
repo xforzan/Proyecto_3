@@ -35,8 +35,8 @@ linkPage("#explorar", activateEventListenerExplore);
 
 linkPage("#homeButton", inicio);
 linkPage("#exploreButton", explorar);
-dataExplore(query, colorValue, orientationValue, orderByValue)
-dataHome()
+// dataExplore(query, colorValue, orientationValue, orderByValue)
+dataHome(1,10)
 chargeFilters()
 activateEventListenerHome()
 

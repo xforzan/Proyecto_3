@@ -1,4 +1,10 @@
 
+.img img{
+    width: 200px;
+    height: 200px;
+}
+
+/* 
 .content {
     column-count: 4;
     gap: 20px;
@@ -43,4 +49,4 @@
     .content {
         column-count: 1;
     }
-}
+} */

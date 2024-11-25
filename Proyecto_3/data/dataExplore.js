@@ -1,5 +1,5 @@
 export const picturesExplore = []
-const morePicturesExplore = []
+
 import { error } from '../pages/Error/error.js'
 import { dataHome } from '../data/dataHome.js'
 import { explorar, activateEventListenerExplore} from '../pages/Explorar/explorar.js'
@@ -26,25 +26,13 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
     if (orderByValue !== "order by"){
         URL += `&order_by=${orderByValue}`
     }
-    if (page === 1){
-        picturesExplore.length = 0
-        console.log(`URL: ${URL}`)
-        console.log(page)
-    }
-
     fetch(`${URL}`)
     .then (content => content.json())
     .then((contentJson) => {
-        if (page === 1) {
-            picturesExplore.push(...contentJson.results);
-        }
-        else {
-            morePicturesExplore.push(...contentJson.results);
-            (picturesExplore.push(...morePicturesExplore));
-        }
+
+        picturesExplore.push(...contentJson.results);
     })
     .then(() =>{
-        morePicturesExplore.length = 0
         activateEventListenerExplore()
         explorar()
 
