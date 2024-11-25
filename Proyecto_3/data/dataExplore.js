@@ -29,7 +29,9 @@ export const dataExplore = (query = "audi", colorValue = "black", orientationVal
     fetch(`${URL}`)
     .then (content => content.json())
     .then((contentJson) => {
-
+        if (page === 1){
+            picturesExplore.length = 0;
+        }
         picturesExplore.push(...contentJson.results);
     })
     .then(() =>{
