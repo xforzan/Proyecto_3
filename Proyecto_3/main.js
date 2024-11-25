@@ -31,13 +31,13 @@ linkPage("#explorar", explorar);
 
 
 
-linkPage("#inicio", activateEventListenerHome);
-linkPage("#explorar", activateEventListenerExplore);
+linkPage("#inicio", activateEventListenerHome, true);
+linkPage("#explorar", activateEventListenerExplore, true);
 
 linkPage("#homeButton", inicio);
 linkPage("#exploreButton", explorar);
 dataExplore(query, colorValue, orientationValue, orderByValue, 1)
-dataHome(1,10)
+dataHome(1,30)
 chargeFilters()
 
 
