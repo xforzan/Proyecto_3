@@ -48,4 +48,6 @@ export const inicio = () => {
     content.appendChild(divisor);
     divisor.appendChild(img);
   }
+
+
 };
