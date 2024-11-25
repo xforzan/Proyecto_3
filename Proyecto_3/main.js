@@ -37,7 +37,7 @@ linkPage("#explorar", activateEventListenerExplore, true);
 linkPage("#homeButton", inicio);
 linkPage("#exploreButton", explorar);
 dataExplore(query, colorValue, orientationValue, orderByValue, 1)
-dataHome(1,30)
+dataHome(1,10)
 chargeFilters()
 
 
